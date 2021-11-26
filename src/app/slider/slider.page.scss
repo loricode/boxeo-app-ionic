@@ -1,0 +1,74 @@
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+
+body {
+
+  background-color: pink;
+}
+
+
+#container {
+
+    margin: 0 0 1rem;
+    height: 10rem;
+    display: flex;
+    /* align-items por defecto tiene el valor `stretch` */
+    display: flex;
+    justify-content: center;
+}
+
+.centro{
+
+  text-align:center;
+  vertical-align: text-top;
+  position: relative;
+  top: -250px;
+  right: 220px;
+}
+
+
+.image {
+   height: 299px;
+   width: 350px;
+   margin: auto;
+   display: block;
+   border-radius: 5px;
+   box-shadow: 5px 5px 0px #424242;
+   padding: 10px;
+   border: 1px solid #000;
+ }
+
+ .contenedor
+  {
+  /*flex-direction: column;*/
+   height: 100vh;
+   display: flex;
+}
+  .contenedor .btn-holder
+  {
+    top: -550px;
+    text-align: center;
+    right: -520px;
+    display: flex;
+    margin-top: 16px;
+
+  }
+
+  .btn-holder{
+    text-align: center;
+  }
+  .botons1 {
+
+    display: flex;
+
+    position: relative;
+    top: 80%;
+
+    right: 168%;
+
+
+
+
+  }
+
+  /*style="position: absolute; top: 80%;"*/

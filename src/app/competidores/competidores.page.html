@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-row>
+    <ion-title>COMPETIDORES</ion-title>
+    <ion-thumbnail class="button-profile" (click)="goProfile()">
+     <ion-button color="light">
+       <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-button>
+    </ion-thumbnail>
+   </ion-row>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form" *ngIf="!tab" [fullscreen]="true">
+
+    <ion-row>
+      <ion-col col-25><b>Nombre</b></ion-col>
+      <ion-col col-25><b>Edad</b></ion-col>
+      <ion-col col-25><b>Peso(kg)</b></ion-col>
+    </ion-row>
+
+    <ion-row wrap *ngFor="let item of listado; let index = index"
+      (click)="detail(item.id)">
+      <ion-col col-25><b>{{item.firstName}}</b></ion-col>
+      <ion-col col-25><b>{{item.age}}</b></ion-col>
+      <ion-col col-25><b>{{item.weight}}</b></ion-col>
+    </ion-row>
+
+     <ion-button
+       (click)="navegarslider()"
+       expand="block" fill="clear" shape="round">
+       Boxeadores
+     </ion-button>
+
+</ion-content>
+
+<ion-content class="auth-form" *ngIf="tab" [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-img src="../../assets/images/{{competitor.image}}"></ion-img>
+      <ion-card-subtitle>{{competitor.lastName}}</ion-card-subtitle>
+      <ion-card-title>{{competitor.firstName}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button
+             shape="round"
+             fill="outline"
+             (click)="closeCard()"
+             >Atras</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

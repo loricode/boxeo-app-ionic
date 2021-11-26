@@ -1,0 +1,7 @@
+{
+  "name": "loginbl",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

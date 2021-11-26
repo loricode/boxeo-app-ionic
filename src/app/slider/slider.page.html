@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>slider</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true"></ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="container">
+
+    <ion-slides>
+
+      <ion-slide *ngFor="let item of listado; let index = index">
+
+
+        <ion-card>
+          <ion-card-header>
+            <img class="image" src="../../assets/images/{{item.image}}"/>
+            <ion-card-subtitle>{{item.lastName}}</ion-card-subtitle>
+            <ion-card-title>{{item.firstName}}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-button
+                    type="button"
+                    color="primary"
+                    expand="block"
+                    (click)="goCompetitor()"
+                    >Regresar</ion-button><br>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+
+
+        <!-- <div id="centrado">
+          <ion-img  src="../../assets/images/{{item.image}}"></ion-img>
+        </div>
+
+        <div class="centro">
+          <h1>{{item.firstName}}</h1>
+          <h2>{{item.lastName}}</h2>
+          <p>{{item.weight}}</p>
+        </div>
+
+        <div class="contenedor">
+
+          <div class="btn-holder">
+            <ion-button class="botons1" type="button" color="primary" expand="block">Aceptar</ion-button><br>
+            <ion-button class="botons1" type="button" color="danger" expand="block">Cancelar</ion-button>
+          </div>
+        </div> -->
+
+      </ion-slide>
+
+    </ion-slides>
+
+  </div>
+
+</ion-content>

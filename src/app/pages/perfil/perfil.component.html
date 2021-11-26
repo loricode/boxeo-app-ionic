@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form" [fullscreen]="true">
+
+  <ion-item lines="full">
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input
+     type="text"
+     required
+     [(ngModel)]="user.firstName">
+    </ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input
+      type="text" required
+      [(ngModel)]="user.lastName">
+    </ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input
+      type="text" required
+      [(ngModel)]="user.email">
+    </ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-button
+        type="button"
+        (click)="update()"
+        color="danger"
+        expand="block">
+        Update
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
