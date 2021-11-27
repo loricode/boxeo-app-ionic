@@ -9,7 +9,7 @@
 
 <ion-content>
 
-  
+
   <form #formulario="ngForm">
 
     <ion-item lines="full">
@@ -23,9 +23,27 @@
     </ion-item>
 
     <ion-item lines="full">
+      <ion-label position="floating">Age</ion-label>
+      <ion-input type="text" name="edad" [(ngModel)]="objCliente.edad" required></ion-input>
+    </ion-item>
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input type="text" name="telefono" [(ngModel)]="objCliente.telefono" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
       <ion-label position="floating">Weight(kg)</ion-label>
       <ion-input type="text"  name="peso"   [(ngModel)]="objCliente.peso"  required></ion-input>
     </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Image</ion-label>
+      <ion-input type="text"  name="imagen"   [(ngModel)]="objCliente.imagen"  required></ion-input>
+    </ion-item>
+
+
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
       <ion-input type="text"  name="email"   [(ngModel)]="objCliente.email"  required></ion-input>

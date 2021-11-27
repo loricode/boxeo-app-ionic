@@ -27,4 +27,8 @@ export class CompetitorService {
   public updateUser(obj: any): Observable<any>{
     return this.http.put('/api.php', obj);
   }
+
+  public createUser(obj: any): Observable<any>{
+    return this.http.post('/api.php', obj);
+  }
 }
